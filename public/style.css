@@ -1,0 +1,41 @@
+body{
+    background-image: url(./p_images/6031991.jpg);
+    background-size: cover;   /*Cover the whole screen*/
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.title {
+    font-size: 3rem; /* Tamaño del texto grande */
+    font-weight: bold; /* Negrita */
+    text-transform: uppercase; /* Texto en mayúsculas */
+    text-align: center; /* Centrado en la página */
+    background: linear-gradient(90deg, #ff6f61, #ff9a8b, #ffd85d); /* Gradiente */
+    background-clip: text; /* Recorta el fondo al texto */
+    -webkit-background-clip: text; /* Recorta el fondo al texto */
+    -webkit-text-fill-color: transparent; /* Hace el texto transparente para mostrar el gradiente */
+    margin: 20px 0; /* Espaciado superior e inferior */
+    text-shadow: 2px 4px 8px rgba(0, 0, 0, 0.3); /* Sombra para destacar */
+    letter-spacing: 2px; /* Espaciado entre letras */
+    animation: colorFade 4s infinite alternate; /* Animación de gradiente */
+  }
+
+  /* Animación suave para el gradiente */
+  @keyframes colorFade {
+    0% {
+      background-position: 0% 50%;
+    }
+    100% {
+      background-position: 100% 50%;
+    }
+  }
+
+.form-singin{
+    width: 50%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.5);
+}
