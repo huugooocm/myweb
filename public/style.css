@@ -1,20 +1,20 @@
 body{
-    background-image: url(./p_images/6031991.jpg);
+    background-image: url(./p_images/abstract-geometric-border-connecting-dots-digital-technology-vector-design.jpg);
     background-size: cover;   /*Cover the whole screen*/
     background-repeat: no-repeat;
     background-position: center;
 }
 
 .title {
+    margin-top: 5%;
     font-size: 3rem; /* Tamaño del texto grande */
     font-weight: bold; /* Negrita */
     text-transform: uppercase; /* Texto en mayúsculas */
     text-align: center; /* Centrado en la página */
-    background: linear-gradient(90deg, #ff6f61, #ff9a8b, #ffd85d); /* Gradiente */
+    background: #18dcff;; 
     background-clip: text; /* Recorta el fondo al texto */
     -webkit-background-clip: text; /* Recorta el fondo al texto */
     -webkit-text-fill-color: transparent; /* Hace el texto transparente para mostrar el gradiente */
-    margin: 20px 0; /* Espaciado superior e inferior */
     text-shadow: 2px 4px 8px rgba(0, 0, 0, 0.3); /* Sombra para destacar */
     letter-spacing: 2px; /* Espaciado entre letras */
     animation: colorFade 4s infinite alternate; /* Animación de gradiente */
@@ -38,4 +38,92 @@ body{
     color: white;
     border-radius: 10px;
     box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.5);
+}
+
+.a-class{
+    margin: 10px;
+    border-radius: 50%;
+    box-sizing: border-box;
+    width:80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    transition: 0.3 ease;
+    font-size: 2rem;
+    color: var(--color);
+}
+
+.h4-title{
+    color:#18dcff;
+    margin-bottom: 30px;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30vh;
+}
+
+.wrapper .button{
+    display: inline-block;
+    height: 60px;
+    width: 60px;
+    overflow: hidden;
+    margin-right: 10px;
+    background:#fff;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 10px 10px  rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-out;
+}
+
+.wrapper .button:hover{
+    width: 200px;
+}
+
+.wrapper .button .icon{
+    display: inline-block;
+    height: 60px;
+    width: 60px;
+    text-align: center;
+    border-radius: 50px;
+    box-sizing: border-box;
+    line-height: 60px;
+}
+
+.wrapper .button:nth-child(1) .icon{
+    border-color: #4267B2;
+    background: #4267B2;
+}
+
+.wrapper .button:nth-child(2) .icon{
+    border-color: #02c03b;
+    background: #02c03b;
+}
+
+.wrapper .button:nth-child(3) .icon{
+    border-color:  #fa34a8;
+    background: #fa34a8;
+}
+
+.wrapper .button:nth-child(4) .icon{
+    border-color: #030002;
+    background: #030002;
+}
+
+.wrapper .button .icon i{
+    font-size: 25px;
+    line-height: 60px;
+}
+
+.wrapper .button span{
+    font-size:20px;
+    font-weight: 500;
+    line-height: 60px;
+    margin-left: 10px
 }
