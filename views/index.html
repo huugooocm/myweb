@@ -11,14 +11,14 @@
     <title>Hugueb</title>
 </head>
 <body>
-    <header>
-        <div class="title">
-            <h1>Welcome to Hugueb</h1><br>
-        </div>
-    </header>
+    {{>initialHeader}}
     <article>
-        <form onsubmit="processUserData(event)" class="form-singin">
-                    <h4 class="h4-title">Sign in</h4>
+        <div class="title">
+            <h1>Welcome to Hugueb</h1>
+        </div>
+        <div class="message"><h5>Start enjoying our free courses</h5></div>
+        <form onsubmit="processLog(event)" class="form-singin">
+                    <h4 class="h4-title">Log in</h4>
                     <div class="mb-3">
                       <label for="exampleInputEmail1" class="form-label">Email address</label><br>
                       <input type="text" class="form-control" id="username" name="username" placeholder="pepe@gmail.com" aria-describedby="emailHelp" required>
@@ -30,29 +30,9 @@
                       <div id="passwordError" style="color: red;"></div>
                     </div>
                     <button type="submit" class="btn btn-primary">Log in</button>
-
-                    <div>If you don't have account, <a href="/registerPage">Sign in</a></div>
         </form>      
     </article>
-    <footer>
-        <div class="wrapper">
-            <div class="button">
-                <div class="icon"><i class="bi bi-facebook"></i></div>
-                <span>Facebook</span>
-            </div>
-            <div class="button">
-                <div class="icon"><i class="bi bi-whatsapp"></i></div>
-                <span>Whatsapp</span>
-            </div>
-            <div class="button">
-                <div class="icon"><i class="bi bi-instagram"></i></div>
-                <span>Instagram</span>
-            </div>
-            <div class="button">
-                <div class="icon"><i class="bi bi-twitter-x"></i></div>
-                <span>X</span>
-            </div>
-        </div>
-    </footer>
+    
+    {{>initialFooter}}
 </body>
 </html>

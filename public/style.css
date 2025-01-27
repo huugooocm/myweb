@@ -1,36 +1,64 @@
-body{
+body {
     background-image: url(./p_images/abstract-geometric-border-connecting-dots-digital-technology-vector-design.jpg);
-    background-size: cover;   /*Cover the whole screen*/
+    background-size: cover;
+    /*Cover the whole screen*/
     background-repeat: no-repeat;
     background-position: center;
 }
 
 .title {
     margin-top: 5%;
-    font-size: 3rem; /* Tamaño del texto grande */
-    font-weight: bold; /* Negrita */
-    text-transform: uppercase; /* Texto en mayúsculas */
-    text-align: center; /* Centrado en la página */
-    background: #18dcff;; 
-    background-clip: text; /* Recorta el fondo al texto */
-    -webkit-background-clip: text; /* Recorta el fondo al texto */
-    -webkit-text-fill-color: transparent; /* Hace el texto transparente para mostrar el gradiente */
-    text-shadow: 2px 4px 8px rgba(0, 0, 0, 0.3); /* Sombra para destacar */
-    letter-spacing: 2px; /* Espaciado entre letras */
-    animation: colorFade 4s infinite alternate; /* Animación de gradiente */
-  }
+    font-size: 3rem;
+    /* Tamaño del texto grande */
+    font-weight: bold;
+    /* Negrita */
+    text-transform: uppercase;
+    /* Texto en mayúsculas */
+    text-align: center;
+    /* Centrado en la página */
+    background: #18dcff;
+    background-clip: text;
+    /* Recorta el fondo al texto */
+    -webkit-background-clip: text;
+    /* Recorta el fondo al texto */
+    -webkit-text-fill-color: transparent;
+    /* Hace el texto transparente para mostrar el gradiente */
+    text-shadow: 2px 4px 8px rgba(0, 0, 0, 0.3);
+    /* Sombra para destacar */
+    letter-spacing: 2px;
+    /* Espaciado entre letras */
+    animation: fadeIn 2s ease-in-out;
+    /* Animación de gradiente */
+}
 
-  /* Animación suave para el gradiente */
-  @keyframes colorFade {
+.message {
+    margin: 2% 0 2%;
+    font-size: 1.5rem;
+    /* Tamaño del texto medio */
+    font-weight: normal;
+    /* Sin negrita */
+    text-align: center;
+    /* Centrado en la página */
+    color: #18dcff;
+    /* Color gris */
+    text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.2);
+    /* Sombra suave */
+    animation: fadeIn 2s ease-in-out;
+    /* Animación de aparición */
+}
+
+
+@keyframes fadeIn {
     0% {
-      background-position: 0% 50%;
+        opacity: 0;
     }
-    100% {
-      background-position: 100% 50%;
-    }
-  }
 
-.form-singin{
+    100% {
+        opacity: 1;
+    }
+}
+
+.form-singin {
     width: 50%;
     margin: 0 auto;
     padding: 20px;
@@ -40,11 +68,11 @@ body{
     box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.5);
 }
 
-.a-class{
+.a-class {
     margin: 10px;
     border-radius: 50%;
     box-sizing: border-box;
-    width:80px;
+    width: 80px;
     height: 80px;
     display: flex;
     justify-content: center;
@@ -55,38 +83,38 @@ body{
     color: var(--color);
 }
 
-.h4-title{
-    color:#18dcff;
+.h4-title {
+    color: #18dcff;
     margin-bottom: 30px;
     text-align: center;
     text-transform: capitalize;
 }
 
-.wrapper{
+.wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 30vh;
 }
 
-.wrapper .button{
+.wrapper .button {
     display: inline-block;
     height: 60px;
     width: 60px;
     overflow: hidden;
     margin-right: 10px;
-    background:#fff;
+    background: #fff;
     border-radius: 50px;
     cursor: pointer;
-    box-shadow: 0 10px 10px  rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease-out;
 }
 
-.wrapper .button:hover{
+.wrapper .button:hover {
     width: 200px;
 }
 
-.wrapper .button .icon{
+.wrapper .button .icon {
     display: inline-block;
     height: 60px;
     width: 60px;
@@ -96,33 +124,33 @@ body{
     line-height: 60px;
 }
 
-.wrapper .button:nth-child(1) .icon{
+.wrapper .button:nth-child(1) .icon {
     border-color: #4267B2;
     background: #4267B2;
 }
 
-.wrapper .button:nth-child(2) .icon{
+.wrapper .button:nth-child(2) .icon {
     border-color: #02c03b;
     background: #02c03b;
 }
 
-.wrapper .button:nth-child(3) .icon{
-    border-color:  #fa34a8;
+.wrapper .button:nth-child(3) .icon {
+    border-color: #fa34a8;
     background: #fa34a8;
 }
 
-.wrapper .button:nth-child(4) .icon{
+.wrapper .button:nth-child(4) .icon {
     border-color: #030002;
     background: #030002;
 }
 
-.wrapper .button .icon i{
+.wrapper .button .icon i {
     font-size: 25px;
     line-height: 60px;
 }
 
-.wrapper .button span{
-    font-size:20px;
+.wrapper .button span {
+    font-size: 20px;
     font-weight: 500;
     line-height: 60px;
     margin-left: 10px
