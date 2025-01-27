@@ -14,7 +14,11 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(express.static(__dirname + '/../public'));
 
+// Usa express.json() para procesar datos en formato JSON
 app.use(express.json());
+
+// Usa express.urlencoded() para procesar datos de formularios (application/x-www-form-urlencoded)
+app.use(express.urlencoded({ extended: true }));
 
 app.use('/', shopRouter);
 

@@ -1,21 +1,21 @@
-async function processUserData(event){
+async function processUserData(event) {
     event.preventDefault();
     const formData = new FormData(event.target);
-    let response = await fetch('/login', {
+    const response = await fetch('/login', {
         method: 'POST',
-        body: URLSearchParams(formData)m
+        body: new URLSearchParams(formData),
     });
     const data = await response.json();
-    
-    if(data.userError){
-        const userError = document.getElementById('userError');
-        userError.innerHTML= data.userError;
+
+    if (data.userError) {
+        const userError = document.getElementById('usernameError');
+        userError.innerHTML = data.userError;
     }
-    if(data.passwordError){
+    if (data.passwordError) {
         const passwordError = document.getElementById('passwordError');
-        passwordError.innerHTML= data.passwordError;
+        passwordError.innerHTML = data.passwordError;
     }
-    if(data.success){
-        window.location.href = '/home';
+    if (data.success) {
+        alert('Success');
     }
 }
