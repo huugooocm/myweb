@@ -16,7 +16,7 @@ body {
     /* Texto en mayúsculas */
     text-align: center;
     /* Centrado en la página */
-    background: #18dcff;
+    background: linear-gradient(135deg, #007bff, #6610f2) ;
     background-clip: text;
     /* Recorta el fondo al texto */
     -webkit-background-clip: text;
@@ -39,7 +39,7 @@ body {
     /* Sin negrita */
     text-align: center;
     /* Centrado en la página */
-    color: #18dcff;
+    color: #007bff;
     /* Color gris */
     text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.2);
     /* Sombra suave */
@@ -84,7 +84,7 @@ body {
 }
 
 .h4-title {
-    color: #18dcff;
+    color:#007bff;
     margin-bottom: 30px;
     text-align: center;
     text-transform: capitalize;
@@ -154,4 +154,114 @@ body {
     font-weight: 500;
     line-height: 60px;
     margin-left: 10px
+}
+
+.courses-container {
+    width: 90%;
+    margin: 30px auto; /* Más espacio alrededor */
+    padding: 30px;
+    background: linear-gradient(135deg, #ffffff, #f9f9f9); /* Fondo degradado suave */
+    border-radius: 0.5%; /* Bordes redondeados */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1); /* Sombra más pronunciada */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animación suave */
+}
+
+/* Hover para dar un efecto interactivo */
+.courses-container:hover {
+    transform: translateY(-5px); /* Levanta un poco el contenedor */
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2); /* Sombra más intensa */
+}
+  
+  /* Título */
+  h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  /* Filas */
+  .row {
+    padding: 2% 2% 0 2%;
+    display: flex;
+    margin-bottom: 10px;
+  }
+  
+  /* Columnas */
+  .col-8,
+  .col-4 {
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    color: #000000;
+  }
+
+  
+  /* Diferenciación de columnas */
+  .col-8 {
+    flex: 2; /* Toma 2 partes de espacio */
+  }
+  
+  .col-4 {
+    flex: 1; /* Toma 1 parte de espacio */
+  }
+  
+  /* Efectos en hover */
+  .row:hover {
+    opacity: 0.8;
+    transform: scale(1.05);
+    transition: all 0.3s ease-in-out;
+  }
+  
+
+
+  .row-odd {
+    background-color: #ffffff; /* blanco */
+  }
+
+  .row-pair {
+    background: linear-gradient(135deg, #007bff, #6610f2); /* Azul claro */
+  }
+
+  .row p{
+    text-align: justify;
+  }
+
+  .row-pair p{
+    color: #ffffff;
+  }
+
+
+  .courses-title {
+    position: relative; /* Necesario para el pseudo-elemento */
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.courses-title h2 {
+    position: relative;
+    display: inline-block;
+    font-size: 3rem;
+    font-weight: bold;
+    color: #ffffff; /* Texto blanco para contraste */
+    padding: 10px 30px; /* Espaciado interno */
+    z-index: 2; /* Asegura que el texto esté sobre el fondo */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background: linear-gradient(135deg, #007bff, #6610f2); /* Fondo degradado directo para el texto */
+    border-radius: 12px; /* Bordes redondeados del fondo */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para destacar */
+    overflow: hidden; /* Cortar contenido extra si lo hay */
+}
+
+/* Línea decorativa detrás del texto */
+.courses-title::after {
+    content: "";
+    position: absolute;
+    top: 50%; /* Centrado vertical */
+    left: 0;
+    width: 100%;
+    height: 10px; /* Grosor de la línea */
+    background: linear-gradient(135deg, #6610f2, #007bff); /* Mismo degradado */
+    transform: translateY(-50%); /* Centrar la línea */
+    z-index: 1; /* Detrás del texto */
 }

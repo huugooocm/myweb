@@ -47,6 +47,7 @@ async function processRegister(event) {
     if (data.userError) {
         const userError = document.getElementById('usernameError');
         userError.innerHTML = data.userError;
+        userError.style.color = 'red';
     }
     
     if (data.passwordError) {
@@ -54,7 +55,33 @@ async function processRegister(event) {
         passwordError.innerHTML = data.passwordError;
     }
 
+    if (data.repeatPasswordError) {
+        const repeatPasswordError = document.getElementById('repeatPasswordError');
+        repeatPasswordError.innerHTML = data.repeatPasswordError;
+    }
+
     if (data.success) {
-        alert('Success');
+        window.location.href = '/';
+    }
+}
+
+async function checkEmail(event) {
+    const email = document.getElementById('username').value;
+    console.log(email);
+    const response = await fetch(`/checkEmail?email=${email}`);
+    const data = await response.json();
+    const userAlert = document.getElementById('usernameError');
+    if(data.userError){
+        userAlert.innerHTML = '';
+        userAlert.innerHTML = data.userError;
+        userAlert.style.color = 'red';
+    }
+    else if(!email){
+        userAlert.innerHTML = '';
+    }
+    else{
+        userAlert.innerHTML = '';
+        userAlert.innerHTML = data.success;
+        userAlert.style.color = 'green';
     }
 }

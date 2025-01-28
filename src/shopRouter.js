@@ -90,7 +90,7 @@ router.post("/register", (req,res)=>{
     if (newUser.password !== repeatedPassword) {
         errorRepeatPassword.push("Passwords do not match");
     }
-    if (shopService.validateUser(newEmail)) {
+    if (shopService.validateEmail(newEmail)) {
         errorUser.push("Username already exists");
     }
     if (errorUser.length === 0 && !newEmail.includes("@")) {
@@ -117,6 +117,19 @@ router.post("/register", (req,res)=>{
         shopService.addUser(newEmail, newUser);
         shopService.addUserToCourse(newUser.course, {email:newEmail, name:newUser.name, birth:newUser.birth});  
         res.json({ success: true });
+    }
+});
+
+router.get("/checkEmail", (req,res)=>{
+    const email= req.query.email;
+    let errorUser=[];
+    if (shopService.validateEmail(email)) {
+        errorUser.push("Username already exists");
+    }
+    if (errorUser.length > 0) {
+        res.json({ userError: errorUser });
+    } else {
+        res.json({ success: "Available email" });
     }
 });
 

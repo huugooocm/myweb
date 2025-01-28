@@ -1,9 +1,6 @@
 let users= new Map();
 let courses= new Map();
 
-export function validateUser(userInfo){
-    return users.has(userInfo.userName);
-}
 
 export function validatePassword(user, password){
     console.log("Validating password:", user, password);
