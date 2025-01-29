@@ -16,9 +16,10 @@ async function processLog(event) {
         passwordError.innerHTML = data.passwordError;
     }
     if (data.success) {
-        alert('Success');
+        window.location.href = `/course/${data.user}`;
     }
 }
+
 
 async function processRegister(event) {
     event.preventDefault();

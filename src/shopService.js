@@ -4,7 +4,8 @@ let courses= new Map();
 
 export function validatePassword(user, password){
     console.log("Validating password:", user, password);
-    return users.get(user)===password;
+    const userGotten= users.get(user);
+    return userGotten.password === password;
 }
 
 export function validateEmail(email){
@@ -24,4 +25,9 @@ export function addCourse(course){
 export function addUserToCourse(course, student){
     console.log("Adding student:", student, "to course:", course);
     courses.get(course).push(student);
+}
+
+export function getUser(user){
+    console.log("Getting user:", user);
+    return users.get(user);
 }

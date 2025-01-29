@@ -8,7 +8,7 @@ app.use(express.urlencoded({ extended: true }));
 
 const router = express.Router(); // Crea un nuevo enrutador
 
-shopService.addUser("hugo@gmail.com", {name: "Hugo", birth:2005, course: "Mechanics", password: "paquitosalas" });
+shopService.addUser("hugo@gmail.com", {name: "Hugo", birth:2005, email:"hugo@gmail.com", course: "Mechanics", password: "paquitosalas" });
 shopService.addCourse("Mechanics");
 shopService.addCourse("Electronics");
 shopService.addCourse("Kitchen");
@@ -36,10 +36,10 @@ router.post("/login", (req,res)=>{
     if (!password) {
         errorPassword.push("Password is required");
     }
-    if (shopService.validateUser(user)) {
+    if (!shopService.validateEmail(user)) {
         errorUser.push("Invalid username");
     }
-    if (shopService.validatePassword(user,password)) {
+    if (!shopService.validatePassword(user,password)) {
         errorPassword.push("Invalid password");
     }
 
@@ -48,7 +48,7 @@ router.post("/login", (req,res)=>{
     } else if (errorPassword.length > 0) {
         res.json({ passwordError: errorPassword.join(", ") });
     } else {
-        res.json({ success: true });
+        res.json({ success: true, user: user});
     }
 });
 
@@ -57,6 +57,7 @@ router.post("/register", (req,res)=>{
     const newUser={
         name: req.body.name,
         birth: req.body.birth,
+        email: req.body.username,
         course: req.body.course,
         password: req.body.password
     }
@@ -131,6 +132,13 @@ router.get("/checkEmail", (req,res)=>{
     } else {
         res.json({ success: "Available email" });
     }
+});
+
+router.get("/course/:user",(req,res)=>{
+    console.log("Getting user:", req.params.user);
+    res.render("course",{
+        user: shopService.getUser(req.params.user),
+    });
 });
 
 export default router;
