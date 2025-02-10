@@ -37,20 +37,26 @@
       <h4 class="h4-title">Log in</h4>
       <div class="mb-3">
         <label for="exampleInputEmail1" class="form-label">Email address</label><br>
-        <input type="text" class="form-control" id="username" name="username" placeholder="pepe@gmail.com"
-          aria-describedby="emailHelp" required>
+        <div class="position-relative">
+          <input type="text" class="form-control pe-5" id="username" name="username" placeholder="pepe@gmail.com" aria-describedby="emailHelp" oninput="clearUserAlert()" required>
+          <i class="bi bi-person-fill position-absolute top-50 end-0 translate-middle-y me-3 text-muted"></i>
+        </div>
         <div id="usernameError" style="color: red;"></div>
       </div>
       <div class="mb-3">
         <label for="exampleInputPassword1" class="form-label">Password</label>
-        <input type="password" class="form-control" id="password" name="password" required>
+        <div class="position-relative">
+          <input type="password" class="form-control pe-5" id="password" name="password" required>
+          <button type="button" class="btn position-absolute top-50 end-0 translate-middle-y me-3 p-0 border-0 bg-transparent" id="togglePasswordIcon" onclick="togglePasswordVisibility()">
+            <i class="bi bi-eye-slash-fill text-muted" id="togglePasswordIcon"></i></button>
+        </div>
         <div id="passwordError" style="color: red;"></div>
       </div>
       <button type="submit" class="btn btn-warning">Log in</button>
     </form>
     {{>socialMedia}}
 
-    <div class="container">
+    <div class="container" id="coursesSection">
       <div class="row">
         <div class="col-3">
           <div class="long-card">

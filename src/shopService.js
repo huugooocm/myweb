@@ -2,10 +2,22 @@ let users= new Map();
 let courses= new Map();
 
 
-export function validatePassword(user, password){
-    console.log("Validating password:", user, password);
-    const userGotten= users.get(user);
-    return userGotten.password === password;
+export function validatePassword(user, password) {
+    console.log("Validating password for user:", user);
+    if (!users.has(user)) {
+        console.error("User not found");
+        return false;
+    }
+
+    const storedPassword = users.get(user).password;
+
+    if (password === storedPassword) {
+        console.log("Password validated successfully");
+        return true;
+    } else {
+        console.error("Incorrect password");
+        return false;
+    }
 }
 
 export function validateEmail(email){

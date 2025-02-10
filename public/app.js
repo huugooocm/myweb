@@ -6,13 +6,15 @@ async function processLog(event) {
         body: new URLSearchParams(formData),
     });
     const data = await response.json();
+    const userError = document.getElementById('usernameError');
+    userError.innerHTML ="";
+    const passwordError = document.getElementById('passwordError');
+    passwordError.innerHTML = "";
 
     if (data.userError) {
-        const userError = document.getElementById('usernameError');
         userError.innerHTML = data.userError;
     }
     if (data.passwordError) {
-        const passwordError = document.getElementById('passwordError');
         passwordError.innerHTML = data.passwordError;
     }
     if (data.success) {
@@ -20,6 +22,20 @@ async function processLog(event) {
     }
 }
 
+clearSignUpAlerts = () => {
+    const nameError = document.getElementById('nameError');
+    nameError.innerHTML = '';
+    const birthError = document.getElementById('birthError');
+    birthError.innerHTML = '';
+    const courseError = document.getElementById('courseError');
+    courseError.innerHTML = '';
+    const userError = document.getElementById('usernameError');
+    userError.innerHTML = '';
+    const passwordError = document.getElementById('passwordError');
+    passwordError.innerHTML = '';
+    const repeatPasswordError = document.getElementById('repeatPasswordError');
+    repeatPasswordError.innerHTML = '';
+}
 
 async function processRegister(event) {
     event.preventDefault();
@@ -29,6 +45,7 @@ async function processRegister(event) {
         body: new URLSearchParams(formData),
     });
     const data = await response.json();
+    clearSignUpAlerts();
 
     if (data.nameError) {
         const nameError = document.getElementById('nameError');
@@ -66,7 +83,7 @@ async function processRegister(event) {
     }
 }
 
-async function checkEmail(event) {
+async function checkEmail() {
     const email = document.getElementById('username').value;
     console.log(email);
     const response = await fetch(`/checkEmail?email=${email}`);
@@ -85,4 +102,35 @@ async function checkEmail(event) {
         userAlert.innerHTML = data.success;
         userAlert.style.color = 'green';
     }
+}
+
+function togglePasswordVisibility(){
+    const password= document.getElementById('password');
+    const button= document.getElementById('togglePasswordIcon');
+    if(password.type==='password'){
+        password.type='text';
+        button.innerHTML=`<i class="bi bi-eye-fill text-muted" id="togglePasswordIcon"></i>`
+    }
+    else{
+        password.type='password';
+        button.innerHTML=`<i class="bi bi-eye-slash-fill text-muted" id="togglePasswordIcon"></i>`
+    }
+}
+
+function toggleRepeatPasswordVisibility(){
+    const password= document.getElementById('repeatPassword');
+    const button= document.getElementById('toggleRepeatPasswordIcon');
+    if(password.type==='password'){
+        password.type='text';
+        button.innerHTML=`<i class="bi bi-eye-fill text-muted" id="togglePasswordIcon"></i>`
+    }
+    else{
+        password.type='password';
+        button.innerHTML=`<i class="bi bi-eye-slash-fill text-muted" id="togglePasswordIcon"></i>`
+    }
+}
+
+function clearUserAlert(){
+    const userAlert = document.getElementById('usernameError');
+    userAlert.innerHTML = '';
 }

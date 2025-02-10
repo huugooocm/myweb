@@ -26,7 +26,7 @@ router.post("/login", (req,res)=>{
 
     const user= req.body.username;
     const password= req.body.password;  
-
+    console.log("User:", user, "Password:", password);
     let errorUser=[];
     let errorPassword=[];
 
@@ -102,14 +102,14 @@ router.post("/register", (req,res)=>{
     }
 
 
-    if (errorUser.length > 0) {
-        res.json({ userError: errorUser.join(", ") });
-    } else if (errorName.length > 0) {
+    if (errorName.length > 0) {
         res.json({ nameError: errorName.join(", ") });
-    } else if (errorBirth.length > 0) {
+    }else if (errorBirth.length > 0) {
         res.json({ birthError: errorBirth.join(", ") });
-    } else if (errorCourse.length > 0) {
+    }else if (errorCourse.length > 0) {
         res.json({ courseError: errorCourse.join(", ") });
+    }else if (errorUser.length > 0) {
+        res.json({ userError: errorUser.join(", ") });
     } else if (errorPassword.length > 0) {
         res.json({ passwordError: errorPassword.join(", ") });
     } else if (errorRepeatPassword.length > 0) {
