@@ -1,14 +1,39 @@
 <header>
-    <nav class="navbar border-bottom border-body" style="background-color: #0f1f31; ">
+    <nav class="navbar navbar-expand-sm border-bottom border-body" style="background-color: #0f1f31;">
         <div class="container-fluid">
-            <a class="navbar-brand" style="color:  #ffc107 ;" href="/"><i class="bi bi-mortarboard"></i> HUGUEB</a>
-            <a class="navbar-brand" style="color:  #ffc107 ; font-size: 1.1rem;" href="#coursesSection"> Courses</a>
-            <a class="navbar-brand" style="color:  #ffc107 ; font-size: 1.1rem;" href="#socialMedia"> Social media</a>
-            <a class="navbar-brand" style="color:  #ffc107 ; font-size: 1.1rem;" href="#footer"> About us</a>
-            <div class="d-flex">
-                <a class="btn btn-outline-light me-2" href="/">Log in</a>
-                <a class="btn btn-warning" href="/registerPage">Sign in</a>
+            <!-- Logo -->
+            <a class="navbar-brand logo" href="/" style="color: #ffc107;">
+                <i class="bi bi-mortarboard"></i> HUGUEB
+            </a>
+    
+            <!-- Botón hamburguesa -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon">
+                    <i class="bi bi-list" style="font-size: 1.5rem; color: #ffc107;"></i>
+                </span>
+            </button>
+    
+            <!-- Contenido del menú -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <!-- Enlaces -->
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#coursesSection" style="color: #ffc107;">Courses</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#socialMedia" style="color: #ffc107;">Social Media</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#footer" style="color: #ffc107;">About Us</a>
+                    </li>
+                </ul>
+    
+                <!-- Botones -->
+                <div class="d-flex ms-auto buttons-container">
+                    <a class="btn btn-outline-light me-2" href="/">Log in</a>
+                    <a class="btn btn-warning" href="/registerPage">Sign in</a>
+                </div>
             </div>
-        </div>  
-    </nav>        
+        </div>
+    </nav>   
 </header>

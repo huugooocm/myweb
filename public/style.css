@@ -7,6 +7,13 @@
     z-index: 1000;
 }
 
+.navbar-nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20vw;
+}
+
 .title {
     margin-top: 7.5%;
     font-size: 3rem;
