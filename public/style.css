@@ -214,3 +214,56 @@
 .long-card:hover .card-body {
     display: block; /* Muestra el contenido cuando pasa el cursor */
 }
+
+.container-user {
+    display: flex;
+    flex-wrap: wrap; /* Para que sea responsivo y los elementos se reorganicen si no hay espacio */
+    justify-content: space-between; /* Espacio entre los elementos */
+    align-items: flex-start; /* Alinea los elementos arriba */
+    margin: 5% auto;
+    padding: 20px;
+    max-width: 78%;
+    gap: 20px; /* Espaciado uniforme entre los elementos */
+}
+
+.user-profile {
+    flex: 1 1 30%; /* 1/3 del ancho de la página */
+    max-width: 30%; /* Limita el ancho al 30% */
+    background-color: #f9f9f9; /* Fondo claro para resaltar */
+    border-radius: 8px; /* Bordes redondeados */
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    text-align: center;
+}
+
+.courses {
+    flex: 1 1 65%; /* 2/3 del ancho de la página */
+    max-width: 65%; /* Limita el ancho al 65% */
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.course-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.profile-img, .course-img {
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.course-img {
+    border-radius: 8px; /* Diferente para las imágenes de los cursos */
+}
