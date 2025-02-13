@@ -9,10 +9,10 @@ app.use(express.urlencoded({ extended: true }));
 const router = express.Router(); // Crea un nuevo enrutador
 
 shopService.addUser("hugo@gmail.com", {name: "Hugo", birth:2005, email:"hugo@gmail.com", course: "Mechanics", password: "paquitosalas" });
-shopService.addCourse("Mechanics", {users:[], description:"This course is about mechanics"});
-shopService.addCourse("Electronics");
-shopService.addCourse("Kitchen");
-shopService.addCourse("Plumber");
+shopService.addCourse("Mechanics", {users:[], description:"This course is about mechanics", icon: "bi bi-car-front-fill"});
+shopService.addCourse("Electronics",{users:[], description:"This course is about electronics", icon: "bi bi-lightning-charge-fill"});
+shopService.addCourse("Kitchen",{users:[], description:"This course is about cooking", icon: "bi bi-egg-fried-fill"});
+shopService.addCourse("Plumber",{users:[], description:"This course is about plumbering", icon: "bi bi-wrench"});
 
 router.get("/", (req,res)=>{
     res.render("index");
@@ -93,6 +93,7 @@ router.post("/register", (req,res)=>{
         errorRepeatPassword.push("Passwords do not match");
     }
     if (shopService.validateEmail(newEmail)) {
+        console.log("email issue");
         errorUser.push("Username already exists");
     }
     if (errorUser.length === 0 && !newEmail.includes("@")) {
@@ -139,6 +140,7 @@ router.get("/course/:user",(req,res)=>{
     console.log("Getting user:", req.params.user);
     res.render("course",{
         user: shopService.getUser(req.params.user),
+        course: shopService.getCourse(shopService.getUser(req.params.user).course)
     });
 });
 

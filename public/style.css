@@ -254,3 +254,73 @@
 .course-img {
     border-radius: 8px; /* Diferente para las imágenes de los cursos */
 }
+
+
+
+/*PRUEBAS PROFILE*/
+.user-profile {
+    width: 350px;
+    background-color: #f9f9f9; /* Fondo claro */
+    border: 1px solid #ddd; /* Borde sutil */
+    border-radius: 12px; /* Esquinas redondeadas */
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+}
+
+.profile-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #ffc107;
+    margin-bottom: 15px;
+}
+
+.profile-username {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.profile-info {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 15px; /* Separación entre filas */
+}
+
+.profile-row {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Espaciado entre ícono y texto */
+}
+
+.profile-row i {
+    font-size: 1.2rem;
+    color: #ffc107; /* Color de los íconos */
+    min-width: 30px; /* Asegura que los íconos estén alineados verticalmente */
+    text-align: center;
+}
+
+.profile-row span {
+    font-size: 1rem;
+    color: #555;
+}
+
+.profile-pack{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 5% 0 5%;
+}
+
+.profile-name {
+    display: grid;
+    place-items: center; /* Centra horizontal y verticalmente */
+    text-align: center;  /* Asegura que el texto esté centrado dentro del elemento */
+}

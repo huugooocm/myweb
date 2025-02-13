@@ -46,3 +46,8 @@ export function getUser(user){
     console.log("Getting user:", user);
     return users.get(user);
 }
+
+export function getCourse(course){
+    console.log("Getting course:", course);
+    return courses.get(course);
+}

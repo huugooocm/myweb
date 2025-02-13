@@ -56,18 +56,35 @@
             <!-- User Profile -->
             <div class="user-profile">
                 {{#image}}
-                    <img src="" alt="Profile Picture" class="profile-img">
+                <img src="" alt="Profile Picture" class="profile-img">
                 {{/image}}
                 {{^image}}
-                    <img src="/p_images/userdefault.jpg" alt="Profile Picture" class="profile-img">
-                {{/image}}	
-                <h3>{{user.name}}</h3>
-                <h5>Course: {{user.course}}</h5>
-                <p>{{user.email}}</p>
-                <p>{{user.birth}}</p>
+                <img src="/p_images/userdefault.jpg" alt="Profile Picture" class="profile-img">
+                {{/image}}
+                <div class="profile-pack">
+                    <div class="profile-info">
+                        <div class="profile-row">
+                            <span>
+                                <h5 class="profile-name">{{user.name}}</h5>
+                            </span>
+                        </div>
+                        <div class="profile-row">
+                            <i class="{{course.icon}}"></i>
+                            <span>{{user.course}}</span>
+                        </div>
+                        <div class="profile-row">
+                            <i class="bi bi-envelope-at-fill"></i>
+                            <span>{{user.email}}</span>
+                        </div>
+                        <div class="profile-row">
+                            <i class="bi bi-cake2-fill"></i>
+                            <span>{{user.birth}}</span>
+                        </div>
+                    </div>
+                </div>
                 <a class="btn btn-warning" href="/editProfile/{{user.email}}">Edit</a>
             </div>
-        
+
             <!-- Courses -->
             <div class="courses">
                 <div class="course-card">
@@ -78,7 +95,7 @@
                 </div>
             </div>
         </div>
-        
+
     </article>
 </body>
 
