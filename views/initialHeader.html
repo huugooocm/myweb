@@ -1,39 +1,35 @@
 <header>
-    <nav class="navbar navbar-expand-sm border-bottom border-body" style="background-color: #0f1f31;">
+    <nav class="navbar navbar-expand-sm sticky-top border-bottom" style="background-color: #0f1f31;">
         <div class="container-fluid">
-            <!-- Logo -->
-            <a class="navbar-brand logo" href="/" style="color: #ffc107;">
-                <i class="bi bi-mortarboard"></i> HUGUEB
-            </a>
-    
-            <!-- Botón hamburguesa -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon">
-                    <i class="bi bi-list" style="font-size: 1.5rem; color: #ffc107;"></i>
-                </span>
+            <a class="navbar-brand mb-0 h1" href="/" style="color: #ffc107;"><i class="bi bi-mortarboard"></i>
+                HUGUEB</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas"
+                aria-controls="offcanvas" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon custom-toggler-icon"></span>
             </button>
-    
-            <!-- Contenido del menú -->
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <!-- Enlaces -->
-                <ul class="navbar-nav mx-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#coursesSection" style="color: #ffc107;">Courses</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#socialMedia" style="color: #ffc107;">Social Media</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#footer" style="color: #ffc107;">About Us</a>
-                    </li>
-                </ul>
-    
-                <!-- Botones -->
-                <div class="d-flex ms-auto buttons-container">
-                    <a class="btn btn-outline-light me-2" href="/">Log in</a>
-                    <a class="btn btn-warning" href="/registerPage">Sign in</a>
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvas" aria-labelledby="offcanvasLabel">
+                <!--offcanvas hace que se oculte-->
+                <div class="offcanvas-header" style="background-color: #0f1f31;">
+                    <h5 class="offcanvas-title" id="offcanvasLabel" style="color: #ffc107;"><i
+                            class="bi bi-mortarboard"></i> HUGUEB</h5>
+                    <!--Titulo de la barra lateral al comprimir-->
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body" style="background-color: #0f1f31;">
+                    <ul class="navbar-nav flex-grow-1 justify-content-around">
+                        <li class="nav-item"><a class="nav-link" href="#socialMedia" style="color: #ffc107;">Social
+                                Media</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#coursesSection"
+                                style="color: #ffc107;">Courses</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#footer" style="color: #ffc107;">Contacto</a>
+                        </li>
+                    </ul>
+                    <div class="d-flex justify-content-end">
+                        <a class="btn btn-outline-light me-2" href="/">Log in</a>
+                        <a class="btn btn-warning" href="/registerPage">Sign in</a>
+                    </div>
                 </div>
             </div>
         </div>
-    </nav>   
+    </nav>
 </header>

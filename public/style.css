@@ -1,19 +1,6 @@
-.navbar {
-    background-color: #0f1f31;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
+.custom-toggler-icon {
+    fill: #ffc107;
 }
-
-.navbar-nav{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20vw;
-}
-
 .title {
     margin-top: 7.5%;
     font-size: 3rem;

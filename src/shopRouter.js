@@ -9,7 +9,7 @@ app.use(express.urlencoded({ extended: true }));
 const router = express.Router(); // Crea un nuevo enrutador
 
 shopService.addUser("hugo@gmail.com", {name: "Hugo", birth:2005, email:"hugo@gmail.com", course: "Mechanics", password: "paquitosalas" });
-shopService.addCourse("Mechanics");
+shopService.addCourse("Mechanics", {users:[], description:"This course is about mechanics"});
 shopService.addCourse("Electronics");
 shopService.addCourse("Kitchen");
 shopService.addCourse("Plumber");
@@ -59,7 +59,8 @@ router.post("/register", (req,res)=>{
         birth: req.body.birth,
         email: req.body.username,
         course: req.body.course,
-        password: req.body.password
+        password: req.body.password,
+        image: null
     }
     const repeatedPassword= req.body.repeatPassword;
 

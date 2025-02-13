@@ -29,14 +29,17 @@ export function addUser(email, userInfo){
     users.set(email, userInfo);
 }
 
-export function addCourse(course){
+export function addCourse(course, info){
     console.log("Adding course:", course);
-    courses.set(course, []);
+    courses.set(course, info);
 }
 
 export function addUserToCourse(course, student){
     console.log("Adding student:", student, "to course:", course);
-    courses.get(course).push(student);
+    let courseOfStudent= courses.get(course)
+    console.log("Course of student:", courseOfStudent);
+    courseOfStudent.users.push(student);
+    console.log("Users in course:", courseOfStudent.users);
 }
 
 export function getUser(user){

@@ -17,18 +17,36 @@
 
 <body>
     <header>
-        <nav class="navbar bg-dark border-bottom border-body" data-bs-theme="dark" style="background-color: #ffc107;">
+        <nav class="navbar navbar-expand-sm sticky-top border-bottom" style="background-color: #0f1f31;">
             <div class="container-fluid">
-                <a class="navbar-brand" style="color:  #ffc107 ;" href="/"><i class="bi bi-mortarboard"></i> HUGUEB</a>
-                <div class="dropdown ms-auto">
-                    <button type="button" id="navbarDropdown" class="btn btn-warning dropdown-toggle"
-                        data-bs-toggle="dropdown" aria-expanded="false">
-                        Hi {{user.name}}
-                    </button>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="/profile/{{user.email}}">Profile</a></li>
-                        <li><a class="dropdown-item" href="/">Log out</a></li>
-                    </ul>
+                <a class="navbar-brand mb-0 h1" href="/" style="color: #ffc107;"><i class="bi bi-mortarboard"></i>
+                    HUGUEB</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas"
+                    aria-controls="offcanvas" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon custom-toggler-icon"></span>
+                </button>
+                <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvas" aria-labelledby="offcanvasLabel">
+                    <!--offcanvas hace que se oculte-->
+                    <div class="offcanvas-header" style="background-color: #0f1f31;">
+                        <h5 class="offcanvas-title" id="offcanvasLabel" style="color: #ffc107;"><i
+                                class="bi bi-mortarboard"></i> HUGUEB</h5>
+                        <!--Titulo de la barra lateral al comprimir-->
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body" style="background-color: #0f1f31;">
+                        <div class="d-flex ms-auto">
+                            <div class="dropdown ms-auto">
+                                <button type="button" id="navbarDropdown" class="btn btn-warning dropdown-toggle"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    Hi {{user.name}}
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item" href="/profile/{{user.email}}">Profile</a></li>
+                                    <li><a class="dropdown-item" href="/">Log out</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </nav>
@@ -37,7 +55,12 @@
         <div class="container-user">
             <!-- User Profile -->
             <div class="user-profile">
-                <img src="" alt="Profile Picture" class="profile-img">
+                {{#image}}
+                    <img src="" alt="Profile Picture" class="profile-img">
+                {{/image}}
+                {{^image}}
+                    <img src="/p_images/userdefault.jpg" alt="Profile Picture" class="profile-img">
+                {{/image}}	
                 <h3>{{user.name}}</h3>
                 <h5>Course: {{user.course}}</h5>
                 <p>{{user.email}}</p>
@@ -49,8 +72,8 @@
             <div class="courses">
                 <div class="course-card">
                     <img src="/p_images/curso1.jpg" alt="Course 1" class="course-img">
-                    <h5>Course 1</h5>
-                    <p>This is a course about...</p>
+                    <h5>Wellcome to our course in {{user.course}}</h5>
+                    <p>{{course.info}}</p>
                     <a href="/course" class="btn btn-warning">Go to course</a>
                 </div>
             </div>
