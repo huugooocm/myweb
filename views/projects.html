@@ -6,8 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Hugo Capa Mora</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
-  <style> 
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet"> 
+  <style>
     :root {
   --bg: #0E1117;
   --card: #1C1F26;
@@ -190,7 +190,6 @@ footer {
 
 
   </style>
-
 </head>
 
 <body>
@@ -209,7 +208,7 @@ footer {
           </div>
           <div class="offcanvas-body">
             <ul class="navbar-nav flex-grow-1 justify-content-around">
-              <li class="nav-item"><a class="nav-link" href="projects.html">My projects</a></li>
+              <li class="nav-item"><a class="nav-link" href="/">My projects</a></li>
               <li class="nav-item"><a class="nav-link" href="socialMedia.html">Contact</a></li>
             </ul>
           </div>
@@ -218,44 +217,63 @@ footer {
     </nav>
   </header>
 
-  <section class="hero">
-    <img src="/p_images/yo.jpg" alt="Foto de Hugo Capa Mora">
-    <div>
-      <h1>Hi, I am Hugo Capa Mora</h1>
-      <p>I am a student of the Double Degree in Computer Engineering and Software Engineering at URJC (Madrid). I enjoy
-        software development, programming, studying algorithms, and creating technological projects with real impact.
-      </p>
-      <p><strong>Full Stack Developer & Software Engineer</strong> — Web, Desktop & Mobile Applications</p>
-    </div>
-  </section>
+ <section class="card-section">
+  <!-- Encabezado con icono -->
+  <div style="grid-column: 1 / -1; text-align: center; margin-bottom: 20px; font-family: 'Inter', system-ui, sans-serif; color: var(--accent); font-weight: 500;">
+    <h2><i class="bi bi-folder-fill"></i> My Featured Projects</h2>
+</div>
 
-  <section class="card-section" id="projects">
-    <div class="card">
-      <h3>Main Technologies</h3>
-      <div class="tech-list">
-        <span class="tech">JavaScript</span>
-        <span class="tech">Python</span>
-        <span class="tech">Node.js</span>
-        <span class="tech">Git</span>
-        <span class="tech">React / Next.js</span>
-        <span class="tech">Express</span>
-        <span class="tech">Java</span>
-        <span class="tech">SQL/MySQL</span>
-        <span class="tech">HTML5</span>
-        <span class="tech">C</span>
-        <span class="tech">Electron</span>
-      </div>
-    </div>
 
-    <div class="card">
-      <h3>Languages</h3>
-      <div class="tech-list">
-        <span class="tech">Spanish (Native)</span>
-        <span class="tech">English</span>
-        <span class="tech">French (Basic)</span>
-      </div>
+  <!-- ZTORE -->
+  <div class="card">
+    <h3>ZTORE</h3>
+    <p>A web project simulating an online store where you can browse products by category, add or edit products, and leave reviews.</p>
+    <div class="tech-list">
+      <span class="tech">JS</span>
+      <span class="tech">HTML</span>
+      <span class="tech">CSS</span>
+      <span class="tech">Express</span>
     </div>
-  </section>
+    <a href="https://github.com/CodeURJC-FW-2024-25/webapp09" class="btn btn-primary mt-3">View Project</a>
+  </div>
+
+  <!-- MPGame -->
+  <div class="card">
+    <h3>MPGame</h3>
+    <p>A Java game demonstrating core OOP concepts. Players can simulate battles using different characters against other users.</p>
+    <div class="tech-list">
+      <span class="tech">Java</span>
+    </div>
+    <a href="https://github.com/Isiperezz/MPgame" class="btn btn-primary mt-3">View Project</a>
+  </div>
+
+  <!-- Conteo -->
+  <div class="card">
+    <h3>Conteo</h3>
+    <p>A mobile/desktop app in development designed to help practice math through various interactive activities.</p>
+    <div class="tech-list">
+      <span class="tech">App</span>
+      <span class="tech">In Development</span>
+    </div>
+    <a href="https://github.com/Sa4dUs/ps2526-grupo1" class="btn btn-primary mt-3">View Project</a>
+  </div>
+
+  <!-- 3 en Raya -->
+  <div class="card">
+    <h3>3 en Raya</h3>
+    <p>A simple Tic-Tac-Toe game built with JS, HTML, CSS, and Electron for desktop.</p>
+    <div class="tech-list">
+      <span class="tech">JS</span>
+      <span class="tech">HTML</span>
+      <span class="tech">CSS</span>
+      <span class="tech">Electron</span>
+    </div>
+    <a href="https://github.com/huugooocm/3enrayagame" class="btn btn-primary mt-3">View Project</a>
+  </div>
+</section>
+
+
+
 
   <footer id="footer">© 2025 Hugo Capa Mora · All rights reserved</footer>
 

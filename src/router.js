@@ -13,4 +13,7 @@ router.get('/socialMedia.html', (req, res) => {
     res.sendFile(path.join(__dirname, '../views/socialMedia.html'));
 });
 
+router.get('/projects.html', (req, res) => {
+    res.sendFile(path.join(__dirname, '../views/projects.html'));
+});
 export default router;

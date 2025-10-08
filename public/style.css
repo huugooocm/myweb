@@ -1,0 +1,169 @@
+    :root {
+  --bg: #0E1117;
+  --card: #1C1F26;
+  --text: #E6E8EA;
+  --muted: #A0A4B0;
+  --accent: #4FC1FF;
+  --hover: #3AA0E8;
+  --button: #4FC1FF;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.navbar,
+.offcanvas {
+  background-color: var(--card) !important;
+}
+
+.nav-link,
+.navbar-brand {
+  color: var(--accent) !important;
+}
+
+.nav-link:hover {
+  color: var(--hover) !important;
+}
+
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.hero img {
+  width: 220px;
+  height: 220px;
+  border-radius: 12px;
+  object-fit: cover;
+  background-color: var(--card);
+}
+
+.hero h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: var(--accent);
+}
+
+.hero p {
+  max-width: 700px;
+  color: var(--muted);
+  margin: 0 auto 1rem;
+}
+
+.card-section {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.card {
+  background: var(--card);
+  padding: 20px;
+  border-radius: 12px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+}
+
+.card h3 {
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+
+.card p {
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.4;
+  margin-bottom: 10px;
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+.tech-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tech {
+  background: rgba(79,193,255,0.1);
+  color: var(--accent);
+  border-radius: 999px;
+  padding: 6px 12px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.btn-primary {
+  background-color: var(--button);
+  border-color: var(--button);
+}
+
+.btn-primary:hover {
+  background-color: var(--hover);
+  border-color: var(--hover);
+}
+
+footer {
+  margin-top: 40px;
+  padding: 20px;
+  text-align: center;
+  color: var(--muted);
+  font-size: 14px;
+  background-color: var(--card);
+}
+
+#socialMedia .wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+#socialMedia .button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: var(--card);
+  color: var(--text);
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+#socialMedia .button:hover {
+  background-color: var(--hover);
+  transform: scale(1.05);
+}
+
+#socialMedia .icon i {
+  font-size: 1.5rem;
+  color: var(--accent);
+}
+
+@media (max-width: 768px) {
+  .card-section {
+    grid-template-columns: 1fr;
+  }
+
+  .hero img {
+    width: 180px;
+    height: 180px;
+  }
+}
